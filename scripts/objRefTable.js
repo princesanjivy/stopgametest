@@ -10,13 +10,17 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetY,
 		C3.Plugins.Sprite.Exps.Y,
-		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
 		C3.Plugins.Touch.Cnds.OnTapGesture,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Cnds.Compare,
-		C3.Plugins.Sprite.Acts.SetAnim
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.System.Acts.ResetEventVar,
+		C3.Plugins.System.Acts.RestartLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -26,6 +30,7 @@ self.C3_JsPropNameTable = [
 	{Sprite3: 0},
 	{bcf3f5445887ace466f4c33d2a: 0},
 	{Text: 0},
+	{reset: 0},
 	{stop: 0}
 ];
 
@@ -35,5 +40,6 @@ self.InstanceType = {
 	Touch: class extends self.IInstance {},
 	Sprite3: class extends self.ISpriteInstance {},
 	bcf3f5445887ace466f4c33d2a: class extends self.ISpriteInstance {},
-	Text: class extends self.ITextInstance {}
+	Text: class extends self.ITextInstance {},
+	reset: class extends self.ISpriteInstance {}
 }
